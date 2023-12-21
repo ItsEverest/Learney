@@ -7,7 +7,7 @@
     --primary: #6C63FF;
     --primary80: rgba(108, 99, 255, 80%);
     --secondary: #f0f0f0;
-    --outline: #ffffff;
+    --outline: #bbbbbb;
 }
 
 * {box-sizing: border-box;}
@@ -173,6 +173,8 @@ hr {
     height: 400px;
     margin-right: 10px;
     border-radius: 15px;
+    background-color: var(--secondary);
+    border: 1px solid var(--outline);
     background-size: cover;
     background-position: center center;
 }
