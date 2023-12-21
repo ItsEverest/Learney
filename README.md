@@ -1,2 +1,2 @@
 # Learney
- Random training website
+Random practice website
