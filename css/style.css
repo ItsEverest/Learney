@@ -108,6 +108,7 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    transition:5s scale ease;
 }
 
 .bento-board {
@@ -125,11 +126,17 @@ footer {
     border-radius: 20px;
     align-items: center;
     width: auto;
+    /*Doesnt work?*/
+    transition:5s scale ease;
 
     img {
         width: 40px;
         padding-right: 8px;
     }
+}
+
+.primary-button:hover, .bento:hover {
+    transform: scale(1.1);
 }
 
 #maths {background-color: var(--red);}
