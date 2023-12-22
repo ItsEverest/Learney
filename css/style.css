@@ -1,116 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
-
 :root {
-    --background-color: #ffffff;
+    --bg: #fefefe;
     --text: #10102F;
-    --text-secondary: #3c3f4e;
     --primary: #6C63FF;
-    --primary80: rgba(108, 99, 255, 80%);
-    --secondary: #f0f0f0;
-    --outline: #bbbbbb;
+    --secondary: #8a8a96;
+    --red: rgb(255, 52, 52);
+    --green: rgb(0, 177, 44);
+    --orange: rgb(238, 164, 5);
+    --pink: rgb(255, 41, 219);
+    --blue: rgb(44, 140, 250);
+    --purple: rgb(104, 12, 141);
+
 }
 
-* {box-sizing: border-box;}
-
 html {
-    font-family: work sans;
-    font-weight: 400;
-    /*background-color: var(--background-color);*/
-    background-image: url('/resources/images/grid.svg');
-    color: var(--text);
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--bg);
+    color:var(--text);
 }
 
 body {
     margin: 0;
-}
-
-main {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-/* NAVBAR */
-
 nav {
-    background-color: var(--background-color);
-    padding: 0 200px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid var(--outline);
-    height: 90px;
-    overflow: hidden;
-    white-space: none;
-    text-wrap: nowrap;
 }
 
 a {
     text-decoration: none;
-    color: var(--text);
 }
 
-.nav-button:hover, .login-button:hover {
-    opacity: 80%;
-}
+/*NAVBAR*/
 
 .logo {
     font-size: 28px;
     font-weight: 700;
 }
 
-.logo-symbol {
+.logo-asterix {
     color: var(--primary);
 }
 
-.navigation {
-    font-size: 18px;
-    font-weight: 400;
-    
+.hamburger-button {
+    box-sizing: border-box;
+    width: 30px;
+}
+
+.hamburger-button:hover {
+    transform: scale(0.9);
+}
+
+/*HERO-SECTION*/
+
+section {
+    margin:100px auto;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 
-.nav-button {
-    padding: 20px 20px;
-    transition: 0.2s opacity;
-}
-
-
-.login-button {
-    border: 1px solid var(--text);
-    padding: 10px 20px;
-    margin: 0 0 0 20px;
-    border-radius: 99px;
-    transition: 0.2s background-color,0.2s color;
-}
-
-.login-button:hover {
-    background-color: var(--text);
-    color: var(--background-color);
-}
-
-
-/*TEXTS*/
+/*HEADINGS*/
 
 .heading1 {
-    margin: 0;
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.heading2 {
-    margin: 0;
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.description {
-    margin: 0 0 50px 0;
-    max-width: 700px;
+    margin:4px;
     font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitles {
+    margin: 0 0 32px;
+    font-size: 20px;
     font-weight: 500;
-    color: var(--text-secondary);
 }
 
 
@@ -118,72 +86,60 @@ a {
 
 .primary-button {
     background-color: var(--primary);
-    color: var(--background-color);
-    border-radius: 50px;
-    padding: 15px 50px;
-    font-size: 16px;
+    color: var(--bg);
+    font-size: 14px;
+    border-radius: 90px;
+    padding: 14px 24px;
 }
 
 .primary-button:hover {
-    background-color: var(--primary80);
-    /*Scale doesn't work?*/
-    transform: scale(5);
+    opacity: 90%;
 }
 
-
-/* HERO-SECTION */
-
-.hero {
+.bento {
+    margin: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1500px;
-    height: 400px;
-    /*Button isn't affected by .description's margin*/
-    margin: 150px auto;
-    padding: 50px 50px;
-}
-
-.hero-image {
-    /*Why not fitting into the .hero section*/
-    display: inline;
-    position: relative;
-    margin: 90px;
-}
-
-hr {
-    box-sizing: border-box;
-    border-color: var(--outline);
-    margin: 200px auto 0;
-    width: 420px;
-}
-
-
-/* CAROUSEL */
-
-#carousel-heading {
-    display: flex;
-    margin: 50px 0;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.carousel-cell{
-    width: 33%;
-    height: 400px;
-    margin-right: 10px;
-    border-radius: 15px;
-    background-color: var(--secondary);
-    border: 1px solid var(--outline);
-    background-size: cover;
-    background-position: center center;
+.bento-card {
+    border-radius: 20px;
+    color: var(--bg);
+    font-size:20px;
+    display: flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-.carousel-cell:before{
-    display: block;
-    content: '';
+#maths {
+    background-color: var(--red);
 }
 
+#geography {
+    background-color: var(--green);
+}
 
+#history {
+    background-color: var(--orange);
+}
 
+#art {
+    background-color: var(--pink);
+}
 
+#computer {
+    background-color: var(--purple);
+}
+
+#music {
+    background-color: var(--blue);
+}
+
+.subject-icon {
+    padding: 0 10px 0 0;
+    width: 30px;
+}
