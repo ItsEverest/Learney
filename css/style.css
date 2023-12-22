@@ -17,6 +17,7 @@ html {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--bg);
     color:var(--text);
+    padding: 0 10px;
 }
 
 body {
@@ -59,7 +60,7 @@ a {
 /*HERO-SECTION*/
 
 section {
-    margin:100px auto;
+    margin:50px auto;
     max-width: 400px;
     align-items: center;
     justify-content: center;
